@@ -7,11 +7,15 @@ import { OperadorComponent } from './operador/operador/operador.component';
 
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatButtonModule} from '@angular/material/button';
+import { CmdComponent } from './cmd/cmd.component';
+import { Peca3DComponent } from './peca3-d/peca3-d.component';
 
 @NgModule({
   declarations: [
     PecaPrioritaryComponent,
     OperadorComponent,
+    CmdComponent,
+    Peca3DComponent,
   ],
   imports: [
     CommonModule,

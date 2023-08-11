@@ -11,7 +11,6 @@ const routes: Routes = [
    loadChildren:() => import('./operador/operador.module'). then(m => m.OperadorModule )   },
 
    {path: 'prio', component: PecaPrioritaryComponent},
-   {path: 'edit/id', component: PecaPrioritaryComponent},
    {path: 'cmd', component: CmdComponent},
    {path: '3D', component: Peca3DComponent}
 

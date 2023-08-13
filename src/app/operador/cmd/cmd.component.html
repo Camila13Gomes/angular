@@ -1,1 +1,41 @@
-<h1> Bem vindo </h1>
+<h1>Solicitação de Análise Peça CMD</h1>
+<mat-form-field appearance="fill">
+  <mat-label>Peça</mat-label>
+  <mat-select [(ngModel)]="selectedPiece" (ngModelChange)="onPieceChange()">
+    <mat-option value="1">AP1</mat-option>
+    <mat-option value="2">AP2</mat-option>
+    <mat-option value="3">AP CANELADO</mat-option>
+    <mat-option value="4">PF3</mat-option>
+    <mat-option value="5">PF4</mat-option>
+    <mat-option value="6">PF5</mat-option>
+    <mat-option value="7">PF6</mat-option>
+    <mat-option value="8">PL1</mat-option>
+    <mat-option value="9">PL2</mat-option>
+    <mat-option value="10">PL3</mat-option>
+    <mat-option value="11">PL4</mat-option>
+    <mat-option value="12">PL5</mat-option>
+    <mat-option value="13">PL6</mat-option>
+    <mat-option value="14">PL MAR</mat-option>
+    <mat-option value="15">AS</mat-option>
+    <mat-option value="16">AS-H</mat-option>
+    <mat-option value="17">COROA JT4</mat-option>
+    <mat-option value="18">COROA DB 35</mat-option>
+    <mat-option value="19">COROA DB 45</mat-option>
+    <mat-option value="20">PK6</mat-option>
+    <mat-option value="21">CRABOT</mat-option>
+    <mat-option value="22">AEQ COROA M9T</mat-option>
+    <mat-option value="23">AEQ M9T</mat-option>
+    <mat-option value="24">CONE CRABOT</mat-option>
+    <mat-option value="25">PINHOES AEQ</mat-option>
+
+  </mat-select>
+</mat-form-field>
+
+<mat-form-field appearance="fill">
+  <mat-label>Rapport</mat-label>
+  <mat-select [(ngModel)]="selectedRapport">
+    <mat-option *ngFor="let rapport of availableRapports" [value]="rapport.value">
+      {{ rapport.label }}
+    </mat-option>
+  </mat-select>
+</mat-form-field>

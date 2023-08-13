@@ -1,5 +1,63 @@
 h1 {
-  font-size: 24px; /* Tamanho da fonte grande */
-  color: white; /* Cor branca */
-  text-align: center; /* Centralizar o texto */
+  font-size: 36px; /* Aumentar o tamanho da fonte para tornar mais evidente */
+  color: white; /* Alterar a cor para amarelo ou outra cor que contraste bem com o preto */
+  text-align: center;
+  margin-top: 20px; /* Adicionar um espaço superior para separar o título das caixas */
+  padding: 10px; /* Adicionar um preenchimento ao redor do título para torná-lo mais destacado */
+  background-color: black; /* Definir um fundo preto */
+}
+
+/* Centralizar e afastar as caixas de opções */
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.form-field {
+  width: 100%;
+  max-width: 300px; /* Aumente este valor para ajustar o tamanho das caixas */
+  margin-bottom: 20px;
+}
+
+/* Aumentar o tamanho das opções de seleção */
+.mat-select-panel {
+  max-height: 300px; /* Ajuste conforme necessário */
+}
+
+.mat-option {
+  height: 40px; /* Ajuste conforme necessário */
+  line-height: 40px; /* Centralizar o texto verticalmente */
+}
+section {
+  display: table;
+}
+
+.example-label {
+  display: table-cell;
+  font-size: 14px;
+  margin-left: 8px;
+  min-width: 120px;
+}
+
+.example-button-row {
+  display: table-cell;
+  width: 490px;
+}
+
+.example-button-row .mat-button-base {
+  margin: 8px 8px 8px 0;
+}
+
+.example-flex-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.example-button-container {
+  display: flex;
+  justify-content: center;
+  width: 120px;
 }

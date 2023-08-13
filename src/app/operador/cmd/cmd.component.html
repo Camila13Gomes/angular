@@ -1,6 +1,10 @@
-<h1>Solicitação de Análise Peça CMD</h1>
+<div class="form-container">
+  <h1>Solicitação de Análise Peça CMD</h1>
+
+  <div class="form-field">
+
 <mat-form-field appearance="fill">
-  <mat-label>Peça</mat-label>
+  <mat-label>PEÇA</mat-label>
   <mat-select [(ngModel)]="selectedPiece" (ngModelChange)="onPieceChange()">
     <mat-option value="1">AP1</mat-option>
     <mat-option value="2">AP2</mat-option>
@@ -30,12 +34,50 @@
 
   </mat-select>
 </mat-form-field>
+</div>
 
+<div class="form-field">
 <mat-form-field appearance="fill">
-  <mat-label>Rapport</mat-label>
+  <mat-label>RAPPORT</mat-label>
   <mat-select [(ngModel)]="selectedRapport">
     <mat-option *ngFor="let rapport of availableRapports" [value]="rapport.value">
       {{ rapport.label }}
     </mat-option>
   </mat-select>
 </mat-form-field>
+
+</div>
+
+<div class="form-field">
+<mat-form-field appearance="fill">
+  <mat-label>ESTADO</mat-label>
+  <mat-select [(ngModel)]="selectedEstado">
+    <mat-option *ngFor="let estado of availableEstados" [value]="estado.value">
+      {{ estado.label }}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+</div>
+
+
+<div class="form-field">
+<mat-form-field appearance="fill">
+  <mat-label>MAQUINA</mat-label>
+  <mat-select [(ngModel)]="selectedMaquina">
+    <mat-option *ngFor="let maquina of availableMaquinas" [value]="maquina.value">
+      {{ maquina.label }}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+
+
+</div>
+
+<section>
+
+
+</section>
+
+
+</div>
+

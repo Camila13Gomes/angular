@@ -350,5 +350,33 @@ export class CmdComponent {
       { value: '2', label: 'TTH e Retificação' },
       { value: '2', label: 'Brochagem' }
     ];
+
+
   }
-}}
+}
+confirmEnvio() {
+  if (this.selectedPiece && this.selectedRapport && this.selectedEstado && this.selectedMaquina) {
+    const confirmacao = window.confirm('Deseja mesmo enviar os dados?');
+    if (confirmacao) {
+      this.mostrarProtocolo();
+    }
+  } else {
+    window.alert('Por favor, selecione todas as opções antes de enviar.');
+  }
+}
+mostrarProtocolo() {
+  const protocolo = this.gerarProtocolo();
+  window.alert(`Seu protocolo: ${protocolo}`);
+  this.reiniciarFormulario();
+}
+reiniciarFormulario() {
+  this.selectedPiece = '';
+  this.selectedRapport = '';
+  this.selectedEstado = '';
+  this.selectedMaquina = '';
+}
+gerarProtocolo() {
+  const numeroProtocolo = Math.floor(Math.random() * 1000000);
+  return `CMD-${numeroProtocolo.toString().padStart(6, '0')}`;
+}
+}

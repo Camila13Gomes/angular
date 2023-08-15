@@ -6,11 +6,13 @@ import { OperadorComponent } from './operador/operador/operador.component';
 
 import { Peca3DComponent } from './peca3-d/peca3-d.component';
 import { PecaPrioritaryComponent } from './peca-prioritary/peca-prioritary.component';
+import { PreparadorCMDComponent } from './operador/operador/preparador-cmd/preparador-cmd.component';
 
 const routes: Routes = [
  {path:'', component:OperadorComponent},
  {path: '', component:Peca3DComponent},
- {path:'', component:PecaPrioritaryComponent}
+ {path:'', component:PecaPrioritaryComponent},
+ {path:'', component:PreparadorCMDComponent}
 
 ];
 

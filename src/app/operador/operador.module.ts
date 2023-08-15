@@ -21,6 +21,7 @@ import {MatSelectModule} from '@angular/material/select';
 
 
 import { FormsModule } from '@angular/forms';
+import { PreparadorCMDComponent } from './operador/operador/preparador-cmd/preparador-cmd.component';
 
 @NgModule({
   declarations: [
@@ -28,10 +29,7 @@ import { FormsModule } from '@angular/forms';
     OperadorComponent,
     CmdComponent,
     Peca3DComponent,
-
-
-
-
+    PreparadorCMDComponent,
 
   ],
   imports: [

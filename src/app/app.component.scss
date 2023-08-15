@@ -27,36 +27,3 @@ section {
   align-items:center;
   height: 90vh;
 }
-
-.custom-button {
-  font-weight: bold;
-  font-size: 1.4rem; /* Aumentando o tamanho da fonte */
-  padding: 50px 80px;  /* Aumentando o espaçamento interno */
-  border-radius: 10px;
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: background-color 0.3s, color 0.3s, background-color 0.3s ease-in-out; /* Adicionando efeito de transição */
-
-  &.peçacmd {
-    background-color: rgba(0, 0, 0, 0.7); /* Fundo semi-transparente preto */
-    color: white;
-  }
-
-  &.peça3D {
-    background-color: rgba(0, 0, 255, 0.7); /* Fundo semi-transparente azul */
-    color: white;
-  }
-
-  &.peçaprioritaria {
-    background-color: rgba(255, 0, 0, 0.7); /* Fundo semi-transparente vermelho */
-    color: white;
-  }
-
-  &:hover {
-    /* Efeito de cor no hover */
-    background-color: rgba(255, 255, 255, 0.7); /* Fundo semi-transparente branco */
-    color: black;
-  }
-}

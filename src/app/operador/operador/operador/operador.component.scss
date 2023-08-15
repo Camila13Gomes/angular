@@ -53,10 +53,15 @@ section {
     background-color: rgba(255, 0, 0, 0.7); /* Fundo semi-transparente vermelho */
     color: white;
   }
+  &.preparador {
+    background-color: rgba(224, 224, 235, 0.707); /* Fundo semi-transparente azul */
+    color: white;
+  }
 
   &:hover {
     /* Efeito de cor no hover */
     background-color: rgba(255, 255, 255, 0.7); /* Fundo semi-transparente branco */
     color: black;
   }
+
 }

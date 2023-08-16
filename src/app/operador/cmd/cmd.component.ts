@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { PedidoService } from 'src/app/pedido.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-cmd',
@@ -14,7 +16,7 @@ export class CmdComponent {
   availableEstados : { value: string; label: string; }[] | undefined;
   availableMaquinas: { value: string; label: string; }[] | undefined;
 
-  constructor() {
+  constructor(private pedidoService: PedidoService, private router:Router) {
     // Defina as opções para ESTADO
     this.availableEstados = [
       { value: '1', label: 'Talhagem'},
@@ -352,8 +354,7 @@ export class CmdComponent {
     ];
 
 
-  }
-}
+}}
 confirmEnvio() {
   if (this.selectedPiece && this.selectedRapport && this.selectedEstado && this.selectedMaquina) {
     const confirmacao = window.confirm('Deseja mesmo enviar os dados?');
@@ -377,6 +378,17 @@ reiniciarFormulario() {
 }
 gerarProtocolo() {
   const numeroProtocolo = Math.floor(Math.random() * 1000000);
-  return `CMD-${numeroProtocolo.toString().padStart(6, '0')}`;
+  return `${numeroProtocolo.toString().padStart(6, '0')}-PRI`;
+}
+enviarPedido() {
+  if (this.selectedPiece && this.selectedRapport && this.selectedEstado && this.selectedMaquina) {
+    const confirmacao = window.confirm('Deseja mesmo enviar os dados?');
+    if (confirmacao) {
+      this.mostrarProtocolo();
+      this.router.navigate(['/tela-preparador']); // Substitua '/tela-preparador' pelo caminho da tela do preparador
+    }
+  } else {
+    window.alert('Por favor, selecione todas as opções antes de enviar.');
+  }
 }
 }

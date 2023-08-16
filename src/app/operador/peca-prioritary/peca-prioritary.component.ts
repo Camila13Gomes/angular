@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { Observable } from 'rxjs';
 import { map, startWith } from 'rxjs/operators';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-peca-prioritary',
@@ -18,7 +19,7 @@ export class PecaPrioritaryComponent {
   availableEstados : { value: string; label: string; }[] | undefined;
   availableMaquinas: { value: string; label: string; }[] | undefined;
 
-  constructor() {
+  constructor(private router: Router) {
     // Defina as opções para ESTADO
     this.availableEstados = [
       { value: '1', label: 'Talhagem'},
@@ -382,6 +383,17 @@ reiniciarFormulario() {
 gerarProtocolo() {
   const numeroProtocolo = Math.floor(Math.random() * 1000000);
   return `${numeroProtocolo.toString().padStart(6, '0')}-PRI`;
+}
+enviarPedido() {
+  if (this.selectedPiece && this.selectedRapport && this.selectedEstado && this.selectedMaquina) {
+    const confirmacao = window.confirm('Deseja mesmo enviar os dados?');
+    if (confirmacao) {
+      this.mostrarProtocolo();
+      this.router.navigate(['/tela-preparador']); // Substitua '/tela-preparador' pelo caminho da tela do preparador
+    }
+  } else {
+    window.alert('Por favor, selecione todas as opções antes de enviar.');
+  }
 }
 }
 
